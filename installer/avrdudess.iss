@@ -27,7 +27,7 @@ AppCopyright={#MyAppCopyright}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=License.txt
+LicenseFile=..\License.txt
 ;InfoAfterFile=Readme.txt
 OutputDir=./
 OutputBaseFilename=setup-{#MyAppName}-{#MyAppVersion}
@@ -45,18 +45,18 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "avrdudess.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "avrdude.conf"; DestDir: "{app}"; Flags: ignoreversion
-Source: "avrdude.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "avr-size.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Credits.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "License.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Readme.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "TODO.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "config.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "presets.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "bits.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\avrdudess.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\avrdude.conf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\avrdude.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\avr-size.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Credits.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Readme.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\TODO.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\config.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\presets.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\avrdudess\bin\Release\bits.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
