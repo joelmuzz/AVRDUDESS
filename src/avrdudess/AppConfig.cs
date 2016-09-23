@@ -16,7 +16,7 @@ namespace avrdudess
     [XmlType(TypeName = "ConfigData")] // For backwards compatability with old (<v2.2) config.xml
     public sealed partial class Config
     {
-        public const uint CONFIG_VERSION = 1;
+        public const uint CONFIG_VERSION = 2;
 
         // Version isn't serializable so use this struct instead
         public struct SkipVersion
@@ -39,6 +39,8 @@ namespace avrdudess
         public string avrdudeConfLoc;   // avrdude.conf location
         public string avrSizeLoc;   // avr-size location
         public Point windowLocation; // For persistant window location across sessions
+        public bool cutdown;
+        public bool enableUpdate;
 
         [XmlIgnore]
         public Version skipVersion
@@ -68,6 +70,8 @@ namespace avrdudess
             avrdudeLoc = "";
             avrdudeConfLoc = "";
             avrSizeLoc = "";
+            cutdown = false;
+            enableUpdate = true;
         }
 
         public new void load()

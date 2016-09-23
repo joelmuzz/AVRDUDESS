@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ConfigData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <configVersion>1</configVersion>
-  <preset>Default</preset>
+<ConfigData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <configVersion>2</configVersion>
+  <preset>Arduino Uno (ATmega328P)</preset>
   <updateCheck>0</updateCheck>
   <skipVersion>
     <Major>0</Major>
@@ -11,4 +11,10 @@
   <avrdudeLoc />
   <avrdudeConfLoc />
   <avrSizeLoc />
+  <windowLocation>
+    <X>208</X>
+    <Y>208</Y>
+  </windowLocation>
+  <cutdown>true</cutdown>
+  <enableUpdate>false</enableUpdate>
 </ConfigData>

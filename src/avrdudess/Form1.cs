@@ -412,7 +412,32 @@ namespace avrdudess
             cmbPresets.SelectedItem = (p != null) ? p : presets.presets.Find(s => s.name == "Default");
 
             // Check for updates
-            UpdateCheck.check.checkNow();
+            if (Config.Prop.enableUpdate)
+            {
+                UpdateCheck.check.checkNow();
+            }
+
+            if (Config.Prop.cutdown)
+            {
+                bool visible = !Config.Prop.cutdown;
+                groupBox7.Visible = visible;
+                groupBox9.Visible = visible;
+                groupBox4.Visible = visible;
+                groupBox5.Visible = visible;
+                gbEEPROMFile.Visible = visible;
+                btnProgram.Visible = visible;
+                btnOptions.Visible = visible;
+                groupBox1.Visible = visible;
+                rbFlashOpRead.Visible = visible;
+                label11.Visible = visible;
+                cmbFlashFormat.Visible = visible;
+                foreach (Control item in groupBox2.Controls)
+                {
+                    item.Enabled = visible;
+                }
+                cmbPort.Enabled = !visible;
+            }
+
         }
 
         // Show AVRDUDE version etc
