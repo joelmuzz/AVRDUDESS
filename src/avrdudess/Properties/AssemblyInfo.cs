@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AVRDUDESS")]
+[assembly: AssemblyTitle("AVRDUDESS_Modified")]
 [assembly: AssemblyDescription("A GUI for AVRDUDE")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Zak Kemble")]
+[assembly: AssemblyCompany("Zak Kemble. Modified Joel Murray.")]
 [assembly: AssemblyProduct("AVRDUDESS")]
 [assembly: AssemblyCopyright("Copyright © 2014 Zak Kemble")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("983481a4-ff71-4000-b4c1-955ec4b37b2a")]
+[assembly: Guid("10A1BC08-15A6-4232-9B02-815F24929AB7")]
 
 // Version information for an assembly consists of the following four values:
 //
