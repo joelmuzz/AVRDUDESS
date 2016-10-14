@@ -16,7 +16,7 @@ namespace avrdudess
     [XmlType(TypeName = "ConfigData")] // For backwards compatability with old (<v2.2) config.xml
     public sealed partial class Config
     {
-        public const uint CONFIG_VERSION = 2;
+        public const uint CONFIG_VERSION = 3;
 
         // Version isn't serializable so use this struct instead
         public struct SkipVersion

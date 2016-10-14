@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ConfigData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <configVersion>2</configVersion>
-  <preset>Arduino Uno (ATmega328P)</preset>
+  <configVersion>3</configVersion>
+  <preset>CM11IC (ATmega328P)</preset>
   <updateCheck>0</updateCheck>
   <skipVersion>
     <Major>0</Major>

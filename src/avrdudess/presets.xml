@@ -31,6 +31,33 @@
     <programmer>arduino</programmer>
     <mcu>m328p</mcu>
     <port>COM1</port>
+    <baud>38400</baud>
+    <bitclock />
+    <flashFile />
+    <flashFormat>a</flashFormat>
+    <flashOp>w</flashOp>
+    <EEPROMFile />
+    <EEPROMFormat>a</EEPROMFormat>
+    <EEPROMOp>w</EEPROMOp>
+    <force>false</force>
+    <disableVerify>false</disableVerify>
+    <disableFlashErase>false</disableFlashErase>
+    <eraseFlashAndEEPROM>false</eraseFlashAndEEPROM>
+    <doNotWrite>false</doNotWrite>
+    <lfuse>0xFF</lfuse>
+    <hfuse>0xDE</hfuse>
+    <efuse>0x05</efuse>
+    <setFuses>false</setFuses>
+    <lockBits>0x3F</lockBits>
+    <setLock>false</setLock>
+    <additional />
+    <verbosity>0</verbosity>
+    <name>CM11IC (ATmega328P)</name>
+  </Preset>
+  <Preset>
+    <programmer>arduino</programmer>
+    <mcu>m328p</mcu>
+    <port>COM1</port>
     <baud>115200</baud>
     <bitclock />
     <flashFile />

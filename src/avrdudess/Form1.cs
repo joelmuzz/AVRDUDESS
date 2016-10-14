@@ -262,10 +262,26 @@ namespace avrdudess
             Util.consoleSet(txtConsole);
         }
 
+
+        private string makePath(Environment.SpecialFolder folder, string fileName)
+        {
+            string path = Path.Combine(Environment.GetFolderPath(folder), AssemblyData.title);
+            path = Path.Combine(path, fileName);
+            return path;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
             // Load saved configuration
             Config.Prop.load();
+
+            if (Config.Prop.configVersion < Config.CONFIG_VERSION)
+            {
+                MessageBox.Show("Config version outdated. Application will close to apply update.");
+                Close();
+            }
 
             // Persist window location across sessions
             // Credits:
@@ -436,6 +452,8 @@ namespace avrdudess
                     item.Enabled = visible;
                 }
                 cmbPort.Enabled = !visible;
+                txtBaudRate.Enabled = !visible;
+                label15.Enabled = !visible;
             }
 
         }
@@ -1241,6 +1259,24 @@ namespace avrdudess
                 Config.Prop.windowLocation = Location;
 
             Config.Prop.save();
+
+
+            if (Config.Prop.configVersion < Config.CONFIG_VERSION)
+            {
+                string fileLocationConfig = makePath(Environment.SpecialFolder.ApplicationData, "config.xml");
+                string fileLocationPreset = makePath(Environment.SpecialFolder.ApplicationData, "presets.xml");
+                try
+                {
+                    File.Delete(fileLocationConfig);
+                    File.Delete(fileLocationPreset);
+                }
+                catch
+                {
+
+                }
+            }
+
+
         }
 
         #endregion

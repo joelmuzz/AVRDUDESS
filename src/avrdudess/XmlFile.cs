@@ -62,7 +62,7 @@ namespace avrdudess
             try
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(fileLocation));
-                File.Copy(source, fileLocation);
+                File.Copy(source, fileLocation, true);
             }
             catch (Exception ex)
             {

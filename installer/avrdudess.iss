@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "AVRDUDESS_Modified"
-#define MyAppVersion "2.4.1"
+#define MyAppVersion "2.5.2"
 #define MyAppPublisher "Zak Kemble"
 #define MyAppURL "https://github.com/joelmuzz/AVRDUDESS"
 #define MyAppExeName "avrdudessModified.exe"
@@ -45,6 +45,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
+;Source: "..\src\avrdudess\presets.xml"; DestDir: "{userappdata}"; Flags: confirmoverwrite ignoreversion
+;Source: "..\src\avrdudess\config.xml"; DestDir: "{userappdata}"; Flags: confirmoverwrite ignoreversion
 Source: "..\src\avrdudess\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\avrdudess\bin\Release\avrdude.conf"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\avrdudess\bin\Release\avrdude.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -58,6 +60,8 @@ Source: "..\src\avrdudess\bin\Release\config.xml"; DestDir: "{app}"; Flags: igno
 Source: "..\src\avrdudess\bin\Release\presets.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\avrdudess\bin\Release\bits.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+Source: "..\libusb0.dll"; DestDir: "{app}"; Flags: confirmoverwrite ignoreversion
+
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -67,4 +71,4 @@ Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: 
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Flags: nowait postinstall skipifsilent runasoriginaluser; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"
